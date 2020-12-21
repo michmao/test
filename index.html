@@ -6,7 +6,7 @@
 <p>it's public! :)</p>
 
 
-import { execSync } from 'child_process';  // replace ^ if using ES modules
+import { exec } from 'child_process';  // replace ^ if using ES modules
 
 <!-- <p>last modified December 21st, 4:03am CST</p> -->
 
@@ -19,7 +19,7 @@ import { execSync } from 'child_process';  // replace ^ if using ES modules
 
 <script type="text/javascript" language="javascript">
   print("Hello World");
-  const output = execSync('date', { encoding: 'utf-8' });  // the default is 'buffer'
+  const output = exec('date', { encoding: 'utf-8' });  // the default is 'buffer'
   console.log('Output was:\n', output);
 </script>
 
