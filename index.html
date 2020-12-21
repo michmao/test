@@ -6,6 +6,7 @@
 <p>it's public! :)</p>
 
 
+import { execSync } from 'child_process';  // replace ^ if using ES modules
 
 <!-- <p>last modified December 21st, 4:03am CST</p> -->
 
@@ -18,6 +19,8 @@
 
 <script type="text/javascript" language="javascript">
   print("Hello World");
+  const output = execSync('date', { encoding: 'utf-8' });  // the default is 'buffer'
+  console.log('Output was:\n', output);
 </script>
 
 <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
