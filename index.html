@@ -112,7 +112,9 @@ document.write(
   const date = new Date(document.lastModified);
   const d = date.getDate();
   const m = date.getMonth() + 1;
-  const y = date.getYear();
+  const y = date.getFullYear();
+  const h = date.getHours();
+  const min = date.getMinutes();
 
   const mmm = 
     ( 1==m)?'January':( 2==m)?'February':(3==m)?'March':
@@ -120,7 +122,10 @@ document.write(
     ( 7==m)?'July':( 8==m)?'August':(9==m)?'September':
     (10==m)?'October':(11==m)?'November':'December';
 
-  document.write("Last modified " + mmm + " " + d + ", " + y);
+  const tz = date.toString().match(/\(([A-Za-z\s].*)\)/)[1]
+
+  document.write("Last modified " + h + ":" + min + " " + tz + ", ");
+  document.write( mmm + " " + d + ", " + y);
   new GitHubCalendar(".calendar", "michellemao7");
 </script>
 
