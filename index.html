@@ -111,7 +111,7 @@ document.write(
 
   const tz = date.toString().match(/\(([A-Za-z\s].*)\)/)[1]
 
-  document.write("Last modified " + h + ":" + (min<10?"0"+d:d) + " " + tz + ", ");
+  document.write("Last modified " + h + ":" + (min<10?"0"+min:min) + " " + tz + ", ");
   document.write( mmm + " " + d + ", " + y);
 
   new GitHubCalendar(".calendar", "michellemao7");
