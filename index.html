@@ -34,14 +34,10 @@
     Loading the data just for you.
 </div>
 
-<script>
-    new GitHubCalendar(".calendar", "michellemao7");
-</script>
 
-<script 
+<!-- <script 
   type="text/JavaScript" 
-  language="JavaScript">
-<!-- 
+  language="JavaScript"> 
 //
 // format date as dd-mmm-yy
 // example: 12-Jan-99
@@ -108,16 +104,24 @@ document.write(
   "This page was updated on " + 
   date_lastmodified() );
 
-// -->
-</script>
+// 
+</script> -->
 
 
 <script>
+  const date = new Date(document.lastModified);
+  const d = date.getDate();
+  const m = date.getMonth() + 1;
+  const y = date.getYear();
 
-const date = new Date(document.lastModified);
+  const mmm = 
+    ( 1==m)?'January':( 2==m)?'February':(3==m)?'March':
+    ( 4==m)?'April':( 5==m)?'May':(6==m)?'June':
+    ( 7==m)?'July':( 8==m)?'August':(9==m)?'September':
+    (10==m)?'October':(11==m)?'November':'December';
 
-document.write("last modified " + date);
-
+  document.write("Last modified " + mmm + " " + d + ", " + y);
+  new GitHubCalendar(".calendar", "michellemao7");
 </script>
 
 </body>
