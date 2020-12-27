@@ -114,7 +114,6 @@ document.write(
   document.write("Last modified " + h + ":" + (min<10?"0"+min:min) + " " + tz + ", ");
   document.write( mmm + " " + d + ", " + y);
 
-  new GitHubCalendar(".calendar", "michellemao7");
 </script>
 
 <!-- Prepare a container for your calendar. -->
@@ -122,6 +121,10 @@ document.write(
     <!-- Loading stuff -->
     Loading... 
 </div>
+
+<script>
+  new GitHubCalendar(".calendar", "michellemao7");
+</script>
 
 </body>
 </html>
